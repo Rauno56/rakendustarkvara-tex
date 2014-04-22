@@ -1,0 +1,38 @@
+\newcommand{\tooLong}[2]{%
+\StrLen{#1}[\theLength]%
+\ifthenelse{ \theLength > #2 }{%
+  \StrLeft{#1}{#2} \dots%
+}{%
+  #1%
+}%
+}
+
+\newcommand{\weekDays}{
+\foreach \d/\a in {esmaspäev/E, teisipäev/T, kolmapäev/K, neljapäev/N, reede/R, laupäev/L, pühapäev/P}{
+  \noindent\d(\a)\\
+}
+}
+
+\section{Ülesanne 5.}
+
+\subsection{Parameetriga makro}
+
+Eelmise ülesande lahendamiseks defineeritud taandamise makro:
+
+\begin{equation*}
+  \cOut{90}{123} \quad \text{ja} \quad \cOutB{321}{123}
+\end{equation*}
+
+\subsection{Hargnemisega makro}
+
+Käsk, mis lühendab teksti maksimmalselt etteantud pikkuseks. Kui teksti lühendatakse märgitakse see ära kolme punktiga:
+
+Parameetritega '123456' ja 5: \tooLong{123456}{5}
+
+Parameetritega '1234' ja 5: \tooLong{1234}{5}
+
+\subsection{Tsükliga makro}
+
+Makro nädalapäevade välja trükkimiseks. Ülikasulik kui on vaja korduvalt igal pool nädalapäevi välja trükkida(produktiivsusgarantii):
+
+\weekDays
