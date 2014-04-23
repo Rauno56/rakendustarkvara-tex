@@ -1,0 +1,42 @@
+\section{Ülesanne 8.}
+
+\subsection{Teoreem}
+
+\begin{definition}[Varjatud Markovi ahel]%~\citep{lember10}
+	Protsessi $X = \{Y_t\}_{t\geq1}$ nimetatakse varjatud Markovi ahelaks kui kehtib:
+
+	\begin{enumerate}
+		\item $\{Y_t\}_{t\geq1}$ korral, juhuslikud suurused $\{X_t\}_{t\geq1}$ on omavahel sõltumatud;
+		\item iga $t = 1,2,\dots$, korral on $X_t$ sõltuv juhuslikust protsessist $\{Y_t\}_{t\geq1}$ (ja ajast $t$) ainult läbi $Y_t$.
+	\end{enumerate}
+
+	Juhuslike protsesside paarile $(X, Y)$ viidatakse ka kui \textit{varjatud Markovi mudelile}.
+\end{definition}
+
+\subsection{Tabel}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ r | *{4}{c} }	
+						& SV 	& sport & sots. & nutt\\
+		\hline
+			 kurb & 0,3 & 0,15	 & 0,05 & 0,5 \\
+		õnnelik & 0,2	& 0,2   & 0,5	& 0,1 \\
+	\end{tabular}
+
+	\caption{Emissioonitõenäosused.}
+	\label{fig:HMM.ex.emission}
+\end{table}
+
+\subsection{Joonis}
+
+Varjatud Markovi ahela mõistet võib kujutada ka järgneva skeemiga:
+
+\begin{figure}[h]
+	\centering
+	\input{markovidef.fig}
+	\caption{Varajtud Markovi ahela kuju.}
+	\label{fig:HMM}
+\end{figure}
+
+Joonisel~\ref{fig:HMM} ristküliku sees olev osa on meile üldjuhul vaadeldamatu ja sealt tuleb varjatud Markovi ahelatele ka nimi.
