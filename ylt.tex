@@ -1,0 +1,52 @@
+\section{Ülesanne 10.}
+
+
+\indent\so{Näide 4}. Nurga radiaanmõõt on 2,495. Arvutada selle nurga kraadimõõt.
+\begin{solution}
+Valemi (2) järgi saame:
+\begin{displaymath}
+\alpha = \frac{2,495 \cdot 180 \degree}{\pi} = \frac{2,495 \cdot 180 \degree}{2,14} = 143 \degree.
+\end{displaymath}
+Kasutades radiaanmõõdu definitsiooni, on kerge tuletada valem kaare pikkuse leidmiseks: et $a=\frac{l}{R}$, siis $l=aR$, s.t. kaare pkkus võrdub kaare radiaanmõõdu ja raadiuse korrutisega.
+\end{solution}
+
+\subsection{Trigonomeetriliste funktsioonide üldistatud definitsioonid}
+
+Käesoleva peatüki artiklis 1 defineerisime teravnurga trigonomeetrilised funktsioonid. Need definitsioonid aga pole rakendatavad nürinurga ja negatiivse nurga korral, sest nad ei anna vastust küsimusele: mida nimetatakse nürinurga või negatiivse nurga trigonomeetrilisteks funktsioonideks. On ilmne, et kuitahes suurte ja mistahes märgiga võetud nurkade trigonomeetriliste funktsioonide käsitlemisel tuleb üldistada trigonomeetriliste funktsioonide mõistet ja defineerida trigonomeetrilisi funktsioonie selliselt, et need sisaldaksid endas ka teravnurga trigonomeetriliste funktsioonide definitsioone kui erijuhte.
+
+Võtame koordinaattasandi alguspunkti ümber vabalt pöörleva kohavektori $\overrightarrow{OA}$, mille lõpp-punkti koordinaadid on $x$ ja $y$ ning moodul $r$ (joon. \ref{fig:theGreatCircle}). Pöörlemisel moodustab kohavektori lõpp-punkt ringjoone, raadiusega $r$. Nimetame seda ringjoont
+
+
+\begin{figure}[h]
+	\begin{tikzpicture}[scale=1.8,cap=round]
+		\tikzstyle{important line}=[very thick]
+		\def\costhirty{0.8660256}
+
+		%axes
+		\draw [->] (-1.5,0) -- (1.5,0) node[below] {$x$};
+		\draw [->] (0,-1.5) -- (0,1.5) node[left] {$y$};
+		%circle
+		\draw[thick] (0cm,0cm) circle(1cm);
+		%pointA
+		\draw[->,>=stealth',very thick] (0cm,0cm) -- (30:1cm) node [above right] {$A$};
+		%angle
+		\draw[->,>=stealth',semithick] (0cm:0.5cm) arc (0:30:0.5cm);
+		\draw (.2cm, 0cm) node[above right] {\small $\alpha$};
+
+		%lines
+		\draw (\costhirty,0.5) -- (-0.3,0.5);
+		\draw (\costhirty,0.5) -- (\costhirty,-0.3);
+
+		%lengths
+		\draw [<->,>=stealth'] (-0.2,0) -- (-0.2,0.5) node [midway,left] {$y$};
+		\draw [<->,>=stealth'] (0,-0.2) -- (\costhirty,-0.2) node [midway,below] {$x$};
+
+		%origin
+		\draw (0cm, 0cm) node[below left] {\small $O$};
+		\draw[fill, white] (0,0) circle [radius=.5pt];
+		\draw (0,0) [thin] circle (.5pt);
+	\end{tikzpicture}
+	\caption{\hspace{375pt}}
+	\label{fig:theGreatCircle}
+\end{figure}
+
